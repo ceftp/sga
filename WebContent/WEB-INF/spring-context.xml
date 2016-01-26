@@ -28,4 +28,5 @@
 		CSS, imagens, JavaScript e etc -->
 	<mvc:default-servlet-handler />
 
+
 </beans>
