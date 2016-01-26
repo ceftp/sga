@@ -23,6 +23,7 @@
 		<property name="maxUploadSize" value="1000000000" />
 	</bean>
 
+
 	<!-- A linha abaixo é necessária para poder carregar nos JSP os arquivos 
 		CSS, imagens, JavaScript e etc -->
 	<mvc:default-servlet-handler />
