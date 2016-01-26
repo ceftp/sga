@@ -1,5 +1,9 @@
 package teste.br.com.sga.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,6 +16,15 @@ public class TesteProduto {
 	
 	@Test
 	public void testeInserirProduto() {
+
+		Date date = null;
+		String dataEmTexto = "23/23/2321";
+		try {
+			date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+		} catch (ParseException e) {
+			System.out.println("Falha na conversão");
+		}
+		
 		Produto produto = new Produto();
 
 		produto.setId(1);
@@ -20,7 +33,7 @@ public class TesteProduto {
 		produto.setMarca("marca");
 		produto.setPrecoCusto(200);
 		produto.setPrecoVenda(250);
-		produto.setDataCompra(null);
+		produto.setDataCompra(date);
 		produto.setQuantidade(1);
 		produto.setImagem("imagem");
 
