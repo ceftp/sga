@@ -9,6 +9,7 @@ import br.com.sga.model.Produto;
 
 public class TesteProduto {
 
+	
 	@Test
 	public void testeInserirProduto() {
 		Produto produto = new Produto();
