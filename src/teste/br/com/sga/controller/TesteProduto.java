@@ -23,8 +23,9 @@ public class TesteProduto {
 			date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
 		} catch (ParseException e) {
 			System.out.println("Falha na conversão");
-		}
+		} 
 		
+		ProdutoDao dao = new ProdutoDao();
 		Produto produto = new Produto();
 
 		produto.setId(1);
@@ -37,9 +38,9 @@ public class TesteProduto {
 		produto.setQuantidade(1);
 		produto.setImagem("imagem");
 
-		ProdutoDao dao = new ProdutoDao();
+	
 		
-		int qtdInicio = dao.listar().size(); 
+		int qtdInicio = dao.listar().size();  
 		dao.salvar(produto); 
 		int qtdFim = dao.listar().size(); 
 

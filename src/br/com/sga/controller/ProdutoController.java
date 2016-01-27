@@ -26,15 +26,15 @@ public class ProdutoController {
 		dao.salvar(produto);
 		System.out.println("Entrou no segundo metodo");
 		
-		model.addAttribute("mensagem", "Produto Inclu√≠do com Sucesso");
-		return "produto/index";
+		model.addAttribute("mensagem", "Produto Inclui≠do com Sucesso");
+		return "menu";
 	}
 	
 	@RequestMapping("/cadastrar")
 	public String exibirCadastrarProduto(){
 		
 		System.out.println("ENTROU NO METODO");
-		return "produto/index";
+		return "produto/cadastrar";
 	}
 	
 	@RequestMapping("listarProduto")
