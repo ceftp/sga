@@ -1,5 +1,6 @@
 package br.com.sga.controller;
 
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.List;
 
@@ -56,4 +57,28 @@ public class ProdutoController {
 	return "forward:listarProduto";
 	}
 	
+	@RequestMapping("alteraProduto")
+	public String alterarProduto(Produto produto, Model model) {
+
+		ProdutoDao dao = new ProdutoDao();
+		Produto produtoalterar = dao.buscarPorId(produto.getId());
+		model.addAttribute("produto", produtoalterar);
+
+		return "produto/editar";
+	}
+	
+	
+	@RequestMapping("editar")
+	public String processaEditarProduto(Model model, Produto produto) throws SQLException{
+		ProdutoDao dao = new ProdutoDao(); 
+		dao.alterar(produto);
+		
+		model.addAttribute("mensagem", "Produto alterado com Sucesso");
+
+		return "forward:listarProduto";
+	}
+
+
 }
+
+
