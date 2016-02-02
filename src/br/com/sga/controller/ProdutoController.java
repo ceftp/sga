@@ -17,6 +17,14 @@ import br.com.sga.util.Util;
 @Controller
 public class ProdutoController {
 	
+	
+	@RequestMapping("/cadastrar")
+	public String exibirCadastrarProduto(){
+		
+		System.out.println("ENTROU NO METODO");
+		return "produto/cadastrar";
+	}
+	
 	@RequestMapping("/incluirProduto")
 	public String incluirProduto(Produto produto ,@RequestParam("file") MultipartFile imagem, Model model){
 		
@@ -29,13 +37,6 @@ public class ProdutoController {
 		
 		model.addAttribute("mensagem", "Produto Inclui­do com Sucesso");
 		return "menu";
-	}
-	
-	@RequestMapping("/cadastrar")
-	public String exibirCadastrarProduto(){
-		
-		System.out.println("ENTROU NO METODO");
-		return "produto/cadastrar";
 	}
 	
 	@RequestMapping("listarProduto")
@@ -58,7 +59,7 @@ public class ProdutoController {
 	}
 	
 	@RequestMapping("alteraProduto")
-	public String alterarProduto(Produto produto, Model model) {
+	public String processaLerProduto(Produto produto, Model model) {
 
 		ProdutoDao dao = new ProdutoDao();
 		Produto produtoalterar = dao.buscarPorId(produto.getId());
@@ -66,8 +67,7 @@ public class ProdutoController {
 
 		return "produto/editar";
 	}
-	
-	
+
 	@RequestMapping("editar")
 	public String processaEditarProduto(Model model, Produto produto) throws SQLException{
 		ProdutoDao dao = new ProdutoDao(); 
@@ -77,6 +77,8 @@ public class ProdutoController {
 
 		return "forward:listarProduto";
 	}
+	
+
 
 
 }

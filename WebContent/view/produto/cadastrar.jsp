@@ -73,6 +73,7 @@
 
     <!-- Contact Section -->
     <section id="contact">
+     <br/><br/><br/>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -88,47 +89,45 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>NOME</label>
-                                <input type="text" class="form-control" placeholder="Name" name="nome" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Name" name="nome" id="name" required data-validation-required-message="Porfavor insira o nome do produto.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         		
 								<div style="text-align: center; color: red;"> ${mensagem} </div>
-                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>MARCA</label>
-                                <input type="text" class="form-control" placeholder="Marca" name="marca" id="" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Marca" name="marca" id="" required data-validation-required-message="Porfavor insira a marca.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>CODIGO</label>
-                                <input type="tel" class="form-control" placeholder="Codigo" name="codigo" id="" required data-validation-required-message="Please enter your codigo.">
+                                <input type="text" class="form-control" placeholder="Codigo" name="codigo" id="" required data-validation-required-message="Porfavor insira o codigo.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                        <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>PREÇO DE CUSTO</label>
-                                <input type="tel" class="form-control" placeholder="Preço de Custo" name="precoCusto" id="" required data-validation-required-message="Please enter your preco de custo.">
+                                <input type="text" class="form-control" placeholder="Preço de Custo" name="precoCusto" id="" required data-validation-required-message="Porfavor insira o preco de custo.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                          <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>PREÇO DE VENDA</label>
-                                <input type="tel" class="form-control" placeholder="Preço de Venda" id="" name="precoVenda" required data-validation-required-message="Please enter your phone preco da venda.">
+                                <input type="text" class="form-control" placeholder="Preço de Venda" id="" name="precoVenda" required data-validation-required-message="Porfavor insira o preco da venda.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                           <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>QUANTIDADE</label>
-                                <input type="number" class="form-control" placeholder="Quantidade" id="" name="quantidade" required data-validation-required-message="Please enter your phone quantidade.">
+                                <input type="text" class="form-control" placeholder="Quantidade" id="" name="quantidade" required data-validation-required-message="Porfavor insira a quantidade.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                             <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>IMAGEM</label>
                                 <input type="file" src="" alt="Submit" class="form-control" placeholder="Imagem" name="file" id="" required data-validation-required-message="Please enter your image.">
@@ -168,7 +167,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2014
+                        SGA - Sistema gerenciador auto peças
                     </div>
                 </div>
             </div>

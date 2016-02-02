@@ -42,7 +42,7 @@
 				</tr>
 				</c:forEach>	
 			</table>
-			
-			
+			<br/>
+			<a href="menu"> <button  class="btn btn-success btn-lg">Voltar</button></a>
 </body>
 </html>

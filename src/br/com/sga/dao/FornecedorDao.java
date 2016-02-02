@@ -9,6 +9,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 import br.com.sga.model.Fornecedor;
+import br.com.sga.model.Produto;
 import br.com.sga.util.ConnectionFactory;
 
 public class FornecedorDao {
@@ -46,7 +47,7 @@ public class FornecedorDao {
 		try {
 			List<Fornecedor> listafornecedor = new ArrayList<Fornecedor>();
 			PreparedStatement stmt = (PreparedStatement) this.connection
-					.prepareStatement("SELECT * FROM fornecedor ORDER BY nome");
+					.prepareStatement("SELECT * FROM fornecedor ORDER BY razaoSocial");
 
 			ResultSet rs = stmt.executeQuery();
 
@@ -89,5 +90,47 @@ public class FornecedorDao {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	public Fornecedor buscarPorId(int id) {
+
+		try {
+		    PreparedStatement stmt = (PreparedStatement) connection.prepareStatement("SELECT * FROM fornecedor WHERE id = ?");
+		    stmt.setInt(1, id);
+		    ResultSet rs = stmt.executeQuery();
+
+		    Fornecedor fornecedor = null;
+		    if (rs.next()) {
+			fornecedor = montarObjeto(rs);
+		    }
+
+		    rs.close();
+		    stmt.close();
+		    connection.close();
+		    return fornecedor;
+		} catch (SQLException e) {
+		    throw new RuntimeException(e);
+		}
+		
+	}
+
+	public void alterar(Fornecedor fornecedor) throws SQLException {
+
+		try {
+			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement("UPDATE fornecedor SET razaoSocial = ? , cnpj = ? , representante = ? , telefone = ? , endereco =?   WHERE id = ?");
+		
+			stmt.setString(1, fornecedor.getRazaoSocial());
+			stmt.setString(2, fornecedor.getCnpj());
+			stmt.setString(3, fornecedor.getRepresentante());
+			stmt.setString(4, fornecedor.getTelefone());
+			stmt.setString(5, fornecedor.getEndereco());
+			stmt.setInt(6, fornecedor.getId());
+
+			stmt.execute();
+			stmt.close();
+			connection.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
 	}
 }
