@@ -8,6 +8,6 @@ public class MenuController {
 
 	@RequestMapping("/menu")
 	public String exibirMenu(){
-		return "menu";
+		return "comum/menu";
 	}
 }

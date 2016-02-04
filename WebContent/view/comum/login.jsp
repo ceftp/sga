@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title> Bem vindo Administrador</title>
 
-<link rel="stylesheet" type="text/css" href="css/Ceft.css">
+<link rel="stylesheet" type="text/css" href="view/comum/css/Ceft.css">
 	
 	
 </head>
@@ -12,9 +12,9 @@
 
 <div class="loginAdmin" align="center" >
 	
-	 <a href="index.php" ><img alt="" style="margin-top: 2%" src="Imagens/ceft.png"> </a> 
+	 <img alt="" style="margin-top: 2%" src="view/comum/Imagens/ceft.png">
 	<div style="margin-top: 8%; margin-bottom: 10%">
-	<form action="conexaoAdmin.php" method="POST">
+	<form action="menu" method="POST">
 	<label style="font-size: 20px">Login</label> <br>
 	<input id=login type="text" name="login" >
 	<br>
