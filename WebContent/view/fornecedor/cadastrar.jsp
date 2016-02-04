@@ -112,7 +112,7 @@
                        <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>TELEFONE</label>
-                                <input type="text" class="form-control" placeholder="endereco" name="telefone" required data-validation-required-message="Porfavor insira o telefone.">
+                                <input type="text" class="form-control" placeholder="telefone" name="telefone" required data-validation-required-message="Porfavor insira o telefone.">
                                 <p class="help-block text-danger"></p>
                             </div>
                            

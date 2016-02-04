@@ -36,7 +36,7 @@ public class ProdutoController {
 		System.out.println("Entrou no segundo metodo");
 		
 		model.addAttribute("mensagem", "Produto Inclui­do com Sucesso");
-		return "menu";
+		return "comum/menu";
 	}
 	
 	@RequestMapping("listarProduto")

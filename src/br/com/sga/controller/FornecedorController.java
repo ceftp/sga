@@ -26,7 +26,7 @@ public class FornecedorController {
 		dao.salvar(fornecedor);
 		
 		model.addAttribute("mensagem", "Fornecedor incluido com Sucesso");
-		return "menu";
+		return "comum/menu";
 	}
 
 	
